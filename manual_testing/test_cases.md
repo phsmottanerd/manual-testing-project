@@ -1,0 +1,8 @@
+# Casos de Teste (Formulário de Contato)
+
+ID | Funcionalidade | Pré-condição | Passos | Dados de Teste | Resultado Esperado | Observações
+---|----------------|--------------|--------|----------------|--------------------|-----------
+TC-001 | Submissão válida | Página aberta | 1. Preencher Nome 2. Preencher Email 3. Preencher Current Address 4. Preencher Permanent Address 5. Clicar Submit | Nome: Paulo Henrique\nEmail: paulo.teste@example.com\nCurrent: Rua A, 123\nPermanent: Rua B, 456 | Saída mostra o nome e email submetidos | -
+TC-002 | Email inválido | Página aberta | 1. Preencher Nome 2. Preencher Email inválido (abc) 3. Clicar Submit | Email: abc | Página pode aceitar ou mostrar comportamento; registrar observação | DemoQA não bloqueia email, anotar comportamento
+TC-003 | Campos vazios | Página aberta | 1. Deixar campos vazios 2. Clicar Submit | - | Verificar comportamento (não quebrar a página) | Registrar como potencial problema se houver erro JS
+TC-004 | Texto longo | Página aberta | 1. Preencher campos com >500 chars 2. Submeter | Strings longas | A página processa ou trunca sem quebrar | Verificar overflow
